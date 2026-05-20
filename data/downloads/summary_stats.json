@@ -54,6 +54,15 @@
       },
       "drivers": {}
     },
+    "Braak_Stage_brain": {
+      "total": 4150,
+      "groups": {
+        "Common": 2952,
+        "EWAS-specific": 799,
+        "haEWAS-specific": 399
+      },
+      "drivers": {}
+    },
     "Chronic_Stress_Blood": {
       "total": 3521,
       "groups": {
@@ -186,13 +195,6 @@
         "Common": 193,
         "EWAS-specific": 164,
         "haEWAS-specific": 75
-      },
-      "drivers": {}
-    },
-    "Braak_Stage_brain": {
-      "total": 399,
-      "groups": {
-        "haEWAS-specific": 399
       },
       "drivers": {}
     },
@@ -407,27 +409,27 @@
   },
   "groups": {
     "haEWAS-specific": 51749,
-    "EWAS-specific": 31865,
-    "Common": 14693
+    "EWAS-specific": 32664,
+    "Common": 17645
   },
   "drivers": {},
   "regions": {
     "Common": {
-      "Body": 6140,
-      "TSS1500": 2015,
-      "5'UTR": 1640,
-      "TSS200": 859,
-      "1stExon": 622,
-      "3'UTR": 563,
+      "Body": 7365,
+      "TSS1500": 2458,
+      "5'UTR": 2047,
+      "TSS200": 1113,
+      "1stExon": 836,
+      "3'UTR": 694,
       "ExonBnd": 28
     },
     "EWAS-specific": {
-      "Body": 13586,
-      "TSS1500": 4312,
-      "5'UTR": 3674,
-      "TSS200": 2464,
-      "1stExon": 1675,
-      "3'UTR": 1419,
+      "Body": 13925,
+      "TSS1500": 4440,
+      "5'UTR": 3771,
+      "TSS200": 2550,
+      "1stExon": 1730,
+      "3'UTR": 1452,
       "ExonBnd": 17
     },
     "haEWAS-specific": {
