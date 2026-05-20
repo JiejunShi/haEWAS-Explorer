@@ -1,6 +1,6 @@
 {
-  "last_turn_at": "2026-05-20T12:34:54.832Z",
-  "turn_count": 3,
-  "last_progress_at": "2026-05-20T12:34:54.832Z",
-  "last_agent_output": "有关系，但要分成两层看：\n\n1. `Statistics` 页面前端本身\n2. 生成 `summary_stats.json` 的上游数据语义\n\n先说结论：**如果你把 `Group` 列改成了 `D"
+  "last_turn_at": "2026-05-20T13:01:05.944Z",
+  "turn_count": 6,
+  "last_progress_at": "2026-05-20T13:01:05.944Z",
+  "last_agent_output": "意思是：你现在这批数据里只有 `Group` 这类分组信息，没有可用于 “CHALM / CAMDA driver” 统计的数据，所以原来的 driver 图没有素材可画。\n\n现在我已经把页面改成“优"
 }
