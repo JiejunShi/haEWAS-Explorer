@@ -1,6 +1,6 @@
 {
-  "last_turn_at": "2026-05-20T12:16:33.472Z",
-  "turn_count": 2,
-  "last_progress_at": "2026-05-20T12:16:33.472Z",
-  "last_agent_output": "更准确地说：`Statistics` 页空白 **不是前端直接因为你提交表格列名变了**，而是它读到的 `drivers` 统计结果已经是空的；而“列名变了/列被删了”很可能是造成这个空结果的上游原因"
+  "last_turn_at": "2026-05-20T12:34:54.832Z",
+  "turn_count": 3,
+  "last_progress_at": "2026-05-20T12:34:54.832Z",
+  "last_agent_output": "有关系，但要分成两层看：\n\n1. `Statistics` 页面前端本身\n2. 生成 `summary_stats.json` 的上游数据语义\n\n先说结论：**如果你把 `Group` 列改成了 `D"
 }

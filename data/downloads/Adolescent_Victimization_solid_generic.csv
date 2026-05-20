@@ -1,4 +1,4 @@
-CpG_ID,Phenotype,seqnames,start,end,gene_name,gene_region,relation_to_island,P_Beta,FDR_Beta,Effect_Beta,P_haEWAS,FDR_haEWAS,Effect_haEWAS,Driver
+CpG_ID,Phenotype,seqnames,start,end,gene_name,gene_region,relation_to_island,P_Beta,FDR_Beta,Effect_Beta,P_haEWAS,FDR_haEWAS,Effect_haEWAS,Group
 cg00435616,Adolescent_Victimization,chr7,1080473.0,1080474.0,C7orf50;C7orf50;C7orf50,Body;Body;Body,N_Shore,3.60865496197329e-07,0.0114137491673169,-0.311489977936375,1.42742841573407e-08,0.0029443042540927,-0.396194696219529,Common
 cg00440797,Adolescent_Victimization,chr6,32493873.0,32493874.0,HLA-DRB5,Body,S_Shelf,3.2576015204163e-07,0.0110141945206378,-0.35662076585464,1.0,1.0,0.0,EWAS-specific
 cg00460155,Adolescent_Victimization,chr3,27448700.0,27448701.0,SLC4A7;SLC4A7;SLC4A7,Body;Body;Body,,3.33506028705589e-06,0.0301440895754942,-0.172301239598947,0.0005835559069964,0.409082993178666,0.0833216458560593,EWAS-specific
