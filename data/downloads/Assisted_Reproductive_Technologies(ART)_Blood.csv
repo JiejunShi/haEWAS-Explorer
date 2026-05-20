@@ -1,4 +1,4 @@
-CpG_ID,Phenotype,seqnames,start,end,gene_name,gene_region,relation_to_island,P_Beta,FDR_Beta,Effect_Beta,P_haEWAS,FDR_haEWAS,Effect_haEWAS,Group
+CpG_ID,Phenotype,seqnames,start,end,gene_name,gene_region,relation_to_island,P_Beta,FDR_Beta,Effect_Beta,P_haEWAS,FDR_haEWAS,Effect_haEWAS,Driver
 cg03625007,Assisted_Reproductive_Technologies(ART),chr2,197478067.0,197478068.0,,,,8.375564161294297e-09,0.0037164504024478,-0.0789854647686642,1.0,1.0,0.0,EWAS-specific
 cg26897054,Assisted_Reproductive_Technologies(ART),chr19,42721870.0,42721871.0,DEDD2,TSS200,Island,8.380850414420264e-09,0.0037164504024478,0.1229022946514532,3.31163083536148e-11,2.34934045885297e-05,-0.151837948480603,Common
 cg22560193,Assisted_Reproductive_Technologies(ART),chr19,1465962.0,1465963.0,APC2,Body,Island,1.2762725157321224e-08,0.0037730486925005,-0.134583005864318,5.1166048981534295e-09,0.0019879749674991,-0.1388945748559007,Common
