@@ -28,22 +28,6 @@ const colorMap = {
 
 const drawOrder = ['haEWAS-specific', 'Common', 'EWAS-specific']; 
 
-function getRootDrivers(data) {
-  return data?.drivers || data?.haewas_drivers || {};
-}
-
-function getPhenoDrivers(phenoInfo) {
-  return phenoInfo?.drivers || phenoInfo?.haewas_drivers || {};
-}
-
-function hasDriverData(driversData) {
-  if (!driversData || typeof driversData !== 'object') return false;
-  return Object.values(driversData).some((value) => {
-    if (!value || typeof value !== 'object') return false;
-    return Object.keys(value).length > 0;
-  });
-}
-
 document.addEventListener('DOMContentLoaded', async () => {
   try {
     const res = await fetch(STATS_URL);
@@ -51,7 +35,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     const data = await res.json();
 
     renderGroupsChart(data.groups);
-    renderDriversChart(data.groups, getRootDrivers(data));
+    renderDriversChart(data.drivers);
     renderRegionsChart(data.regions);
     renderPhenotypesChart(data.phenotypes);
 
@@ -66,7 +50,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   } catch (err) {
     document.querySelector('.dashboard-grid').innerHTML = 
-      `<p style="color:red;">Failed to load data: ${err.message}. Ensure the stats generator has been executed.</p>`;
+      `<p style="color:red;">Failed to load data: ${err.message}. Ensure generate_stats.py has been executed.</p>`;
   }
 });
 
@@ -96,19 +80,13 @@ function renderGroupsChart(groupsData) {
   Plotly.newPlot('chart-groups', [trace], layout, { displayModeBar: false, responsive: true });
 }
 
-function renderDriversChart(groupsData, driversData) {
-  if (!hasDriverData(driversData)) {
-    renderGroupTotalsChart(groupsData);
-    return;
-  }
-
+function renderDriversChart(driversData) {
   const xLabels = ['CHALM', 'CAMDA'];
   const traces = [];
-  const safeDriversData = driversData || {};
 
   ['Common', 'haEWAS-specific'].forEach(grp => {
-    if (!safeDriversData[grp]) return;
-    const yVals = xLabels.map(drv => safeDriversData[grp][drv] || 0);
+    if (!driversData[grp]) return;
+    const yVals = xLabels.map(drv => driversData[grp][drv] || 0);
     traces.push({
       x: xLabels, y: yVals, name: grp, type: 'bar',
       marker: { color: colorMap[grp] }
@@ -123,32 +101,6 @@ function renderDriversChart(groupsData, driversData) {
     showlegend: true, legend: { orientation: 'h', y: -0.1, xanchor: 'center', x: 0.5 }
   };
   Plotly.newPlot('chart-drivers', traces, layout, { displayModeBar: false, responsive: true });
-}
-
-function renderGroupTotalsChart(groupsData) {
-  const xLabels = drawOrder.filter((grp) => groupsData?.[grp] !== undefined);
-  const yVals = xLabels.map((grp) => groupsData[grp] || 0);
-  const colors = xLabels.map((grp) => colorMap[grp] || '#999');
-
-  const trace = {
-    x: xLabels,
-    y: yVals,
-    type: 'bar',
-    marker: { color: colors },
-    text: yVals.map(String),
-    textposition: 'outside',
-    hoverinfo: 'x+y'
-  };
-
-  const layout = {
-    ...layoutBase,
-    margin: { t: 60, l: 50, r: 30, b: 70 },
-    title: { text: 'Global Group Counts', font: { size: 16 } },
-    xaxis: { tickangle: -15 },
-    yaxis: { title: 'Number of CpGs' },
-    showlegend: false
-  };
-  Plotly.newPlot('chart-drivers', [trace], layout, { displayModeBar: false, responsive: true });
 }
 
 function renderRegionsChart(regionsData) {
@@ -267,8 +219,7 @@ function renderPhenoDetails(phenoName, phenoInfo) {
   Plotly.newPlot('chart-pheno-pie', [traceGroups], layoutGroups, { displayModeBar: false, responsive: true });
 
   const preferredDriverOrder = ['CHALM', 'CAMDA', 'Both'];
-  const rawDrivers = getPhenoDrivers(phenoInfo);
-  const subtitle = document.getElementById('driver-subtitle');
+  const rawDrivers = phenoInfo.drivers || {};
   
   const dLabels = Object.keys(rawDrivers).sort((a, b) => {
     let idxA = preferredDriverOrder.indexOf(a);
@@ -287,7 +238,6 @@ function renderPhenoDetails(phenoName, phenoInfo) {
 
   if (dLabels.length > 0) {
     driverWrapper.style.display = 'block';
-    if (subtitle) subtitle.textContent = 'Primary Drivers';
     const traceDrivers = {
       labels: dLabels, values: dValues, type: 'pie', hole: 0.5,
       sort: false,
@@ -301,31 +251,7 @@ function renderPhenoDetails(phenoName, phenoInfo) {
     };
     Plotly.newPlot('chart-pheno-drivers', [traceDrivers], layoutDrivers, { displayModeBar: false, responsive: true });
   } else {
-    const groupLabels = drawOrder.filter((grp) => phenoInfo.groups?.[grp] !== undefined);
-    const groupValues = groupLabels.map((grp) => phenoInfo.groups[grp] || 0);
-    const groupColors = groupLabels.map((grp) => colorMap[grp] || '#999');
-
-    driverWrapper.style.display = 'block';
-    if (subtitle) subtitle.textContent = 'Group Counts';
-
-    const traceFallback = {
-      x: groupLabels,
-      y: groupValues,
-      type: 'bar',
-      marker: { color: groupColors },
-      text: groupValues.map(String),
-      textposition: 'outside',
-      hoverinfo: 'x+y'
-    };
-    const layoutFallback = {
-      paper_bgcolor: 'rgba(0,0,0,0)',
-      plot_bgcolor: 'rgba(0,0,0,0)',
-      title: null,
-      margin: { t: 40, l: 30, r: 20, b: 60 },
-      showlegend: false,
-      xaxis: { tickangle: -15 },
-      yaxis: { title: 'CpGs' }
-    };
-    Plotly.newPlot('chart-pheno-drivers', [traceFallback], layoutFallback, { displayModeBar: false, responsive: true });
+    driverWrapper.style.display = 'none';
+    Plotly.purge('chart-pheno-drivers');
   }
 }
