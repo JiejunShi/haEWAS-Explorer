@@ -66,7 +66,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   } catch (err) {
     document.querySelector('.dashboard-grid').innerHTML = 
-      `<p style="color:red;">Failed to load data: ${err.message}. Ensure generate_stats.py has been executed.</p>`;
+      `<p style="color:red;">Failed to load data: ${err.message}. Ensure the stats generator has been executed.</p>`;
   }
 });
 
