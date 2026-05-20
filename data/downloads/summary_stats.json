@@ -7,11 +7,7 @@
         "haEWAS-specific": 6736,
         "Common": 4648
       },
-      "drivers": {
-        "CAMDA": 5483,
-        "CHALM": 3824,
-        "Both": 2077
-      }
+      "drivers": {}
     },
     "Liver_Cancer_Liver": {
       "total": 15229,
@@ -20,11 +16,7 @@
         "EWAS-specific": 13447,
         "haEWAS-specific": 955
       },
-      "drivers": {
-        "Both": 17,
-        "CAMDA": 1750,
-        "CHALM": 15
-      }
+      "drivers": {}
     },
     "Total_PBB_Exposure_whole_blood": {
       "total": 9531,
@@ -33,11 +25,7 @@
         "EWAS-specific": 239,
         "Common": 176
       },
-      "drivers": {
-        "CAMDA": 7929,
-        "CHALM": 826,
-        "Both": 537
-      }
+      "drivers": {}
     },
     "Gestational_Age(Weeks)_Blood": {
       "total": 7824,
@@ -46,11 +34,7 @@
         "Common": 2643,
         "haEWAS-specific": 3760
       },
-      "drivers": {
-        "CAMDA": 1913,
-        "CHALM": 3391,
-        "Both": 1099
-      }
+      "drivers": {}
     },
     "Breast_Cancer_Breast": {
       "total": 5749,
@@ -59,11 +43,7 @@
         "EWAS-specific": 1885,
         "haEWAS-specific": 3573
       },
-      "drivers": {
-        "Both": 131,
-        "CAMDA": 3326,
-        "CHALM": 407
-      }
+      "drivers": {}
     },
     "Parkinsons_Disease_Blood": {
       "total": 5135,
@@ -72,24 +52,7 @@
         "Common": 1760,
         "haEWAS-specific": 1956
       },
-      "drivers": {
-        "CHALM": 3170,
-        "Both": 205,
-        "CAMDA": 341
-      }
-    },
-    "Braak_Stage_brain": {
-      "total": 4151,
-      "groups": {
-        "Common": 2952,
-        "EWAS-specific": 799,
-        "haEWAS-specific": 400
-      },
-      "drivers": {
-        "CHALM": 1976,
-        "Both": 1174,
-        "CAMDA": 202
-      }
+      "drivers": {}
     },
     "Chronic_Stress_Blood": {
       "total": 3521,
@@ -98,11 +61,7 @@
         "Common": 490,
         "haEWAS-specific": 2432
       },
-      "drivers": {
-        "CHALM": 527,
-        "Both": 244,
-        "CAMDA": 2151
-      }
+      "drivers": {}
     },
     "Schizophrenia_Blood": {
       "total": 3521,
@@ -111,10 +70,7 @@
         "Common": 9,
         "haEWAS-specific": 3419
       },
-      "drivers": {
-        "CAMDA": 3419,
-        "CHALM": 9
-      }
+      "drivers": {}
     },
     "Systemic_Lupus_Erythematosus_Blood": {
       "total": 3506,
@@ -123,11 +79,7 @@
         "Common": 68,
         "haEWAS-specific": 3338
       },
-      "drivers": {
-        "CHALM": 58,
-        "Both": 33,
-        "CAMDA": 3315
-      }
+      "drivers": {}
     },
     "Postmenstrual_Age(Weeks)_solid_generic": {
       "total": 2816,
@@ -136,11 +88,7 @@
         "Common": 326,
         "EWAS-specific": 170
       },
-      "drivers": {
-        "Both": 649,
-        "CAMDA": 1183,
-        "CHALM": 814
-      }
+      "drivers": {}
     },
     "Ulcerative_Colitis_colon": {
       "total": 2791,
@@ -149,11 +97,7 @@
         "EWAS-specific": 9,
         "Common": 74
       },
-      "drivers": {
-        "CAMDA": 2563,
-        "Both": 92,
-        "CHALM": 127
-      }
+      "drivers": {}
     },
     "Colorectal_Cancer_Intestine": {
       "total": 2245,
@@ -162,11 +106,7 @@
         "Common": 157,
         "haEWAS-specific": 1534
       },
-      "drivers": {
-        "CHALM": 320,
-        "Both": 80,
-        "CAMDA": 1291
-      }
+      "drivers": {}
     },
     "COVID19_Blood": {
       "total": 2050,
@@ -175,11 +115,7 @@
         "EWAS-specific": 210,
         "haEWAS-specific": 1513
       },
-      "drivers": {
-        "Both": 247,
-        "CHALM": 316,
-        "CAMDA": 1277
-      }
+      "drivers": {}
     },
     "Alcohol_Use_in_Pregnancy_Blood": {
       "total": 2044,
@@ -188,11 +124,7 @@
         "Common": 331,
         "haEWAS-specific": 1136
       },
-      "drivers": {
-        "Both": 215,
-        "CHALM": 454,
-        "CAMDA": 798
-      }
+      "drivers": {}
     },
     "Idiopathic_Pulmonary_Fibrosis_lung": {
       "total": 2035,
@@ -201,11 +133,7 @@
         "Common": 77,
         "EWAS-specific": 24
       },
-      "drivers": {
-        "CAMDA": 1556,
-        "Both": 187,
-        "CHALM": 268
-      }
+      "drivers": {}
     },
     "SLEDAI_Score_Blood": {
       "total": 1903,
@@ -214,11 +142,7 @@
         "EWAS-specific": 81,
         "haEWAS-specific": 1782
       },
-      "drivers": {
-        "CHALM": 104,
-        "Both": 9,
-        "CAMDA": 1709
-      }
+      "drivers": {}
     },
     "Inflammatory_Bowel_Disease_Blood": {
       "total": 1385,
@@ -227,11 +151,7 @@
         "EWAS-specific": 448,
         "haEWAS-specific": 673
       },
-      "drivers": {
-        "CHALM": 232,
-        "Both": 116,
-        "CAMDA": 589
-      }
+      "drivers": {}
     },
     "Birth_Weight(Kg)_Blood": {
       "total": 981,
@@ -240,11 +160,7 @@
         "EWAS-specific": 131,
         "haEWAS-specific": 530
       },
-      "drivers": {
-        "CHALM": 379,
-        "Both": 174,
-        "CAMDA": 297
-      }
+      "drivers": {}
     },
     "Viral_Load(log10)_Blood": {
       "total": 719,
@@ -253,11 +169,7 @@
         "EWAS-specific": 121,
         "haEWAS-specific": 206
       },
-      "drivers": {
-        "Both": 244,
-        "CHALM": 238,
-        "CAMDA": 116
-      }
+      "drivers": {}
     },
     "Zygosity_Blood": {
       "total": 630,
@@ -266,11 +178,7 @@
         "EWAS-specific": 152,
         "haEWAS-specific": 180
       },
-      "drivers": {
-        "Both": 216,
-        "CHALM": 166,
-        "CAMDA": 96
-      }
+      "drivers": {}
     },
     "Diabetes_Blood": {
       "total": 432,
@@ -279,11 +187,14 @@
         "EWAS-specific": 164,
         "haEWAS-specific": 75
       },
-      "drivers": {
-        "CAMDA": 57,
-        "CHALM": 124,
-        "Both": 87
-      }
+      "drivers": {}
+    },
+    "Braak_Stage_brain": {
+      "total": 399,
+      "groups": {
+        "haEWAS-specific": 399
+      },
+      "drivers": {}
     },
     "War_Trauma_Blood": {
       "total": 362,
@@ -292,11 +203,7 @@
         "Common": 133,
         "haEWAS-specific": 65
       },
-      "drivers": {
-        "CHALM": 166,
-        "Both": 24,
-        "CAMDA": 8
-      }
+      "drivers": {}
     },
     "Arthritis_Blood": {
       "total": 353,
@@ -305,11 +212,7 @@
         "EWAS-specific": 114,
         "haEWAS-specific": 182
       },
-      "drivers": {
-        "Both": 23,
-        "CHALM": 50,
-        "CAMDA": 166
-      }
+      "drivers": {}
     },
     "First_Episode_Psychosis_Blood": {
       "total": 326,
@@ -318,11 +221,7 @@
         "EWAS-specific": 40,
         "haEWAS-specific": 186
       },
-      "drivers": {
-        "CHALM": 68,
-        "Both": 39,
-        "CAMDA": 179
-      }
+      "drivers": {}
     },
     "Edematous_Severe_Acute_Malnutrition_solid_generic": {
       "total": 313,
@@ -331,11 +230,7 @@
         "EWAS-specific": 96,
         "haEWAS-specific": 34
       },
-      "drivers": {
-        "CHALM": 165,
-        "Both": 42,
-        "CAMDA": 10
-      }
+      "drivers": {}
     },
     "Sporadic_Creutzfeldt-Jakob_Disease_whole_blood": {
       "total": 312,
@@ -344,11 +239,7 @@
         "EWAS-specific": 197,
         "haEWAS-specific": 12
       },
-      "drivers": {
-        "CAMDA": 20,
-        "Both": 40,
-        "CHALM": 55
-      }
+      "drivers": {}
     },
     "HCV_Status_Blood": {
       "total": 298,
@@ -357,11 +248,7 @@
         "Common": 122,
         "haEWAS-specific": 109
       },
-      "drivers": {
-        "Both": 87,
-        "CHALM": 119,
-        "CAMDA": 25
-      }
+      "drivers": {}
     },
     "Allergy_Blood": {
       "total": 205,
@@ -370,10 +257,7 @@
         "EWAS-specific": 143,
         "haEWAS-specific": 47
       },
-      "drivers": {
-        "CHALM": 55,
-        "CAMDA": 7
-      }
+      "drivers": {}
     },
     "Parity_Blood": {
       "total": 197,
@@ -382,11 +266,7 @@
         "EWAS-specific": 64,
         "haEWAS-specific": 38
       },
-      "drivers": {
-        "Both": 20,
-        "CHALM": 110,
-        "CAMDA": 3
-      }
+      "drivers": {}
     },
     "Intellectual_Disability_Blood": {
       "total": 191,
@@ -395,11 +275,7 @@
         "EWAS-specific": 51,
         "haEWAS-specific": 124
       },
-      "drivers": {
-        "Both": 12,
-        "CAMDA": 96,
-        "CHALM": 32
-      }
+      "drivers": {}
     },
     "HIV_Blood": {
       "total": 173,
@@ -408,11 +284,7 @@
         "EWAS-specific": 44,
         "haEWAS-specific": 113
       },
-      "drivers": {
-        "CHALM": 17,
-        "CAMDA": 104,
-        "Both": 8
-      }
+      "drivers": {}
     },
     "Psoriasis_skin": {
       "total": 133,
@@ -421,11 +293,7 @@
         "EWAS-specific": 27,
         "Common": 11
       },
-      "drivers": {
-        "CAMDA": 58,
-        "CHALM": 29,
-        "Both": 19
-      }
+      "drivers": {}
     },
     "Adolescent_Victimization_solid_generic": {
       "total": 131,
@@ -434,10 +302,7 @@
         "EWAS-specific": 63,
         "haEWAS-specific": 24
       },
-      "drivers": {
-        "CHALM": 62,
-        "Both": 6
-      }
+      "drivers": {}
     },
     "Smoking_Status_Blood": {
       "total": 127,
@@ -446,11 +311,7 @@
         "EWAS-specific": 65,
         "haEWAS-specific": 30
       },
-      "drivers": {
-        "CHALM": 37,
-        "Both": 8,
-        "CAMDA": 17
-      }
+      "drivers": {}
     },
     "HOMA-IR_whole_blood": {
       "total": 104,
@@ -459,11 +320,7 @@
         "Common": 4,
         "EWAS-specific": 9
       },
-      "drivers": {
-        "CAMDA": 68,
-        "Both": 16,
-        "CHALM": 11
-      }
+      "drivers": {}
     },
     "Preeclampsia_whole_blood": {
       "total": 100,
@@ -472,22 +329,14 @@
         "Common": 13,
         "EWAS-specific": 4
       },
-      "drivers": {
-        "CAMDA": 48,
-        "CHALM": 32,
-        "Both": 16
-      }
+      "drivers": {}
     },
     "Waist_Circumference(CM)_whole_blood": {
       "total": 86,
       "groups": {
         "haEWAS-specific": 86
       },
-      "drivers": {
-        "CHALM": 35,
-        "CAMDA": 48,
-        "Both": 3
-      }
+      "drivers": {}
     },
     "Gestational_Diabetes_Mellitus_Blood": {
       "total": 61,
@@ -496,11 +345,7 @@
         "EWAS-specific": 8,
         "haEWAS-specific": 37
       },
-      "drivers": {
-        "Both": 5,
-        "CHALM": 7,
-        "CAMDA": 41
-      }
+      "drivers": {}
     },
     "Assisted_Reproductive_Technologies(ART)_Blood": {
       "total": 59,
@@ -509,22 +354,14 @@
         "Common": 5,
         "haEWAS-specific": 43
       },
-      "drivers": {
-        "Both": 3,
-        "CHALM": 5,
-        "CAMDA": 40
-      }
+      "drivers": {}
     },
     "Behavior_Score_Index_solid_generic": {
       "total": 50,
       "groups": {
         "haEWAS-specific": 50
       },
-      "drivers": {
-        "CAMDA": 16,
-        "CHALM": 28,
-        "Both": 6
-      }
+      "drivers": {}
     },
     "Birth_Mode_Blood": {
       "total": 30,
@@ -533,11 +370,7 @@
         "EWAS-specific": 8,
         "haEWAS-specific": 11
       },
-      "drivers": {
-        "Both": 11,
-        "CHALM": 2,
-        "CAMDA": 9
-      }
+      "drivers": {}
     },
     "PSA_Amount_whole_blood": {
       "total": 18,
@@ -552,10 +385,7 @@
         "EWAS-specific": 2,
         "haEWAS-specific": 10
       },
-      "drivers": {
-        "CAMDA": 2,
-        "CHALM": 8
-      }
+      "drivers": {}
     },
     "BMI_Blood": {
       "total": 11,
@@ -564,10 +394,7 @@
         "EWAS-specific": 7,
         "haEWAS-specific": 2
       },
-      "drivers": {
-        "Both": 1,
-        "CHALM": 3
-      }
+      "drivers": {}
     },
     "Atherosclerosis_whole_blood": {
       "total": 6,
@@ -575,50 +402,36 @@
         "Common": 4,
         "haEWAS-specific": 2
       },
-      "drivers": {
-        "Both": 2,
-        "CHALM": 4
-      }
+      "drivers": {}
     }
   },
   "groups": {
-    "haEWAS-specific": 51750,
-    "EWAS-specific": 32664,
-    "Common": 17645
+    "haEWAS-specific": 51749,
+    "EWAS-specific": 31865,
+    "Common": 14693
   },
-  "drivers": {
-    "Common": {
-      "CHALM": 8476,
-      "Both": 5255,
-      "CAMDA": 3914
-    },
-    "haEWAS-specific": {
-      "CAMDA": 38412,
-      "CHALM": 10369,
-      "Both": 2969
-    }
-  },
+  "drivers": {},
   "regions": {
     "Common": {
-      "Body": 7365,
-      "TSS1500": 2458,
-      "5'UTR": 2047,
-      "TSS200": 1113,
-      "1stExon": 836,
-      "3'UTR": 694,
+      "Body": 6140,
+      "TSS1500": 2015,
+      "5'UTR": 1640,
+      "TSS200": 859,
+      "1stExon": 622,
+      "3'UTR": 563,
       "ExonBnd": 28
     },
     "EWAS-specific": {
-      "Body": 13925,
-      "TSS1500": 4440,
-      "5'UTR": 3771,
-      "TSS200": 2550,
-      "1stExon": 1730,
-      "3'UTR": 1452,
+      "Body": 13586,
+      "TSS1500": 4312,
+      "5'UTR": 3674,
+      "TSS200": 2464,
+      "1stExon": 1675,
+      "3'UTR": 1419,
       "ExonBnd": 17
     },
     "haEWAS-specific": {
-      "Body": 21517,
+      "Body": 21516,
       "TSS1500": 7301,
       "5'UTR": 6515,
       "TSS200": 4128,
