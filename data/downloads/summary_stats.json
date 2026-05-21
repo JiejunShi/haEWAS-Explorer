@@ -79,16 +79,16 @@
       }
     },
     "Braak_Stage_brain": {
-      "total": 4150,
+      "total": 4149,
       "groups": {
         "Common": 2952,
         "EWAS-specific": 799,
-        "haEWAS-specific": 399
+        "haEWAS-specific": 398
       },
       "drivers": {
         "CHALM": 1976,
         "Both": 1174,
-        "CAMDA": 201
+        "CAMDA": 200
       }
     },
     "Chronic_Stress_Blood": {
@@ -603,7 +603,7 @@
     }
   },
   "groups": {
-    "haEWAS-specific": 51749,
+    "haEWAS-specific": 51748,
     "EWAS-specific": 32664,
     "Common": 17645,
     "Unknown": 92
@@ -615,7 +615,7 @@
       "CAMDA": 3914
     },
     "haEWAS-specific": {
-      "CAMDA": 38411,
+      "CAMDA": 38410,
       "CHALM": 10369,
       "Both": 2969
     }
@@ -642,7 +642,7 @@
     "haEWAS-specific": {
       "Body": 40191,
       "5'UTR": 11343,
-      "TSS1500": 11083,
+      "TSS1500": 11082,
       "TSS200": 5622,
       "1stExon": 3550,
       "3'UTR": 2820,
