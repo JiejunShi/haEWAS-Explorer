@@ -526,20 +526,6 @@
         "Both": 6
       }
     },
-    "processed_46_phenotypes_index": {
-      "total": 46,
-      "groups": {
-        "Unknown": 46
-      },
-      "drivers": {}
-    },
-    "selected_binary_summary": {
-      "total": 32,
-      "groups": {
-        "Unknown": 32
-      },
-      "drivers": {}
-    },
     "Birth_Mode_Blood": {
       "total": 30,
       "groups": {
@@ -557,13 +543,6 @@
       "total": 18,
       "groups": {
         "EWAS-specific": 18
-      },
-      "drivers": {}
-    },
-    "selected_continuous_summary": {
-      "total": 14,
-      "groups": {
-        "Unknown": 14
       },
       "drivers": {}
     },
@@ -605,8 +584,7 @@
   "groups": {
     "haEWAS-specific": 51748,
     "EWAS-specific": 32664,
-    "Common": 17645,
-    "Unknown": 92
+    "Common": 17645
   },
   "drivers": {
     "Common": {

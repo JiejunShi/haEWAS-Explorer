@@ -45,9 +45,6 @@
     "Viral_Load(log10)_Blood.csv",
     "Waist_Circumference(CM)_whole_blood.csv",
     "War_Trauma_Blood.csv",
-    "Zygosity_Blood.csv",
-    "processed_46_phenotypes_index.csv",
-    "selected_binary_summary.csv",
-    "selected_continuous_summary.csv"
+    "Zygosity_Blood.csv"
   ]
 }
