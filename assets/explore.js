@@ -2,6 +2,7 @@
 
 const PROJECT_SLUG = 'hetero-ewas-explorer'; 
 const UPDATE_INTERVAL_MS = 300; 
+const DATA_VERSION = window.HAEWAS_CONFIG?.DATA_VERSION || 'dev';
 const MANIFEST_REL = 'data/downloads/index.json';
 const CSV_DIR_REL  = 'data/downloads';
 const CACHE_VERSION = "v3.0";
@@ -17,8 +18,13 @@ const BASE_PATH = detectBasePrefix();
 const BASE_URL  = new URL(BASE_PATH, location.origin); 
 
 function abs(urlLike) { return new URL(urlLike, BASE_URL).href; }
-const MANIFEST_URL = abs(MANIFEST_REL);
-function csvAbsUrl(name) { return abs(`${CSV_DIR_REL}/${name}`); }
+function versionedUrl(urlLike) {
+  const url = new URL(urlLike, BASE_URL);
+  url.searchParams.set('v', DATA_VERSION);
+  return url.href;
+}
+const MANIFEST_URL = versionedUrl(MANIFEST_REL);
+function csvAbsUrl(name) { return versionedUrl(`${CSV_DIR_REL}/${name}`); }
 const WORKER_URL = new URL('assets/csvWorker.js', BASE_URL); 
 
 let rawData = [];
@@ -576,7 +582,7 @@ function loadCsvWithWorker(url, name) {
 async function bootData() {
   const files = await loadManifest();
   
-  const currentManifestHash = CACHE_VERSION + JSON.stringify(files);
+  const currentManifestHash = `${CACHE_VERSION}:${DATA_VERSION}:${JSON.stringify(files)}`;
   const cachedManifestHash = localStorage.getItem('haEWAS_manifest_hash');
 
   if (cachedManifestHash === currentManifestHash) {

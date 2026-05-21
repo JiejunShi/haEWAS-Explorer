@@ -1,0 +1,3 @@
+window.HAEWAS_CONFIG = {
+  DATA_VERSION: '20260521',
+};

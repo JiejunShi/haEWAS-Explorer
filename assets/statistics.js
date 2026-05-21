@@ -1,6 +1,7 @@
 // assets/statistics.js — Render global comparative dashboard charts
 
 const PROJECT_SLUG = 'hetero-ewas-explorer'; 
+const DATA_VERSION = window.HAEWAS_CONFIG?.DATA_VERSION || 'dev';
 function detectBasePrefix() {
   const p = location.pathname;
   const marker = `/${PROJECT_SLUG}/`;
@@ -10,7 +11,7 @@ function detectBasePrefix() {
 }
 const BASE_PATH = detectBasePrefix();                  
 const BASE_URL  = new URL(BASE_PATH, location.origin); 
-const STATS_URL = new URL('data/downloads/summary_stats.json', BASE_URL).href;
+const STATS_URL = new URL(`data/downloads/summary_stats.json?v=${encodeURIComponent(DATA_VERSION)}`, BASE_URL).href;
 
 const layoutBase = {
   paper_bgcolor: 'rgba(0,0,0,0)',

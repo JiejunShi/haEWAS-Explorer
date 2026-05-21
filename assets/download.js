@@ -2,6 +2,7 @@
 // Uses absolute URLs so it works under a subpath like "/hetero-ewas-explorer/".
 
 const PROJECT_SLUG = 'haEWAS-Explorer';
+const DATA_VERSION = window.HAEWAS_CONFIG?.DATA_VERSION || 'dev';
 const MANIFEST_REL = 'data/downloads/index.json';
 const CSV_DIR_REL  = 'data/downloads';
 
@@ -16,9 +17,14 @@ function detectBasePrefix() {
 const BASE_PATH = detectBasePrefix();
 const BASE_URL  = new URL(BASE_PATH, location.origin);
 function abs(urlLike) { return new URL(urlLike, BASE_URL).href; }
+function versionedUrl(urlLike) {
+  const url = new URL(urlLike, BASE_URL);
+  url.searchParams.set('v', DATA_VERSION);
+  return url.href;
+}
 
-const MANIFEST_URL = abs(MANIFEST_REL);
-function csvAbsUrl(name) { return abs(`${CSV_DIR_REL}/${name}`); }
+const MANIFEST_URL = versionedUrl(MANIFEST_REL);
+function csvAbsUrl(name) { return versionedUrl(`${CSV_DIR_REL}/${name}`); }
 
 let allFiles = [];   // [{name, url, dataset, sizeBytes?}]
 let filtered = [];
