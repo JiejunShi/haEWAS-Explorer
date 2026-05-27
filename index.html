@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
@@ -40,18 +40,18 @@
     <!-- Hero (single column). Title + lede same width as figures -->
     <section class="hero container hero-split reveal">
       <div class="hero-copy">
-        <h1 class="display gradient-text display-full">Welcome to Heterogeneity-Adjusted EWAS Explorer!</h1>
+        <h1 class="display gradient-text display-full">Heterogeneity-Adjusted EWAS Explorer</h1>
         <p class="lede lede-full">
-          An interactive portal for exploring, visualizing, and <strong>transforming</strong> DNA methylation data. Discover novel epigenetic markers driven by methylation heterogeneity that are routinely overlooked by traditional EWAS.
+          A web resource for analysing, visualizing, and <strong>converting</strong> DNA methylation array data with heterogeneity-adjusted metrics. The platform supports identification of phenotype-associated CpG sites that may not be resolved by conventional EWAS based solely on mean methylation levels.
         </p>
         <div class="cta-row">
           <a class="btn primary btn-lg" href="explore.html">Start Exploring</a>
           <a class="btn outline btn-lg" href="download.html">Get Data</a>
         </div>
         <ul class="hero-highlights">
-          <li><strong>Online Matrix Converter:</strong> Instantly transform your EPIC/450k Beta-value arrays into methylation heterogeneity matrices (CHALM and CAMDA).</li>
-          <li><strong>Global Statistics Dashboard:</strong> Interactive visual summaries comparing haEWAS vs. conventional EWAS.</li>
-          <li><strong>Dynamic Data Exploration:</strong> Clickable Manhattan plots seamlessly linked to comprehensive data tables.</li>
+          <li><strong>Online Matrix Converter:</strong> Convert EPIC/450k beta-value matrices to CHALM and CAMDA representations for downstream haEWAS analysis.</li>
+          <li><strong>Global Statistics Dashboard:</strong> Compare haEWAS-specific, conventional EWAS-specific, and shared signals across curated phenotypes.</li>
+          <li><strong>Dynamic Data Exploration:</strong> Inspect Manhattan plots and linked result tables for locus-level review and filtering.</li>
         </ul>
       </div>
       <!-- right visual intentionally removed -->
@@ -61,16 +61,16 @@
     <section class="section container reveal">
       <h3 class="h2-tight">Why Heterogeneity-Adjusted EWAS (haEWAS)?</h3>
       <p class="justify">
-        Epigenome-wide association studies (EWAS) have identified numerous DNA methylation alterations associated with disease and complex traits. To date, most EWAS rely on microarray-derived Beta values, which represent mean methylation levels in bulk tissues. However, the same mean methylation level can mask fundamentally different degrees of <strong>single-molecule methylation heterogeneity</strong>. While existing deconvolution methods can correct for cell-type abundance, they cannot resolve this intrinsic single-molecule variation. Historically, capturing this heterogeneity required whole-genome bisulfite sequencing (WGBS)—a method too costly for large population-based studies.
+        Epigenome-wide association studies (EWAS) have identified many DNA methylation changes associated with disease and complex traits. Most EWAS analyse microarray-derived beta values, which summarize mean methylation across bulk samples. This summary can obscure differences in <strong>single-molecule methylation heterogeneity</strong> between loci with similar mean levels. Cell-type deconvolution addresses compositional variation, but not heterogeneity within the underlying methylation patterns. Direct measurement of such heterogeneity by whole-genome bisulfite sequencing (WGBS) remains impractical for many large cohorts.
       </p>
       <p class="justify">
-        To bridge this gap, we developed a computational framework that infers methylation heterogeneity directly from standard methylation array signals. By establishing a mapping between mean methylation levels and single-molecule heterogeneity metrics—such as
+        haEWAS addresses this limitation by inferring heterogeneity-related metrics from standard methylation array signals. By linking mean methylation levels to measures such as
         <strong><a href="https://www.nature.com/articles/s41467-020-20492-7" target="_blank" rel="noopener" aria-label="CHALM paper on Nature Communications">CHALM</a></strong>
         and
-        <strong><a href="https://www.nature.com/articles/s41467-021-25521-7" target="_blank" rel="noopener" aria-label="CAMDA paper on Nature Communications">CAMDA</a></strong>—our approach enables <strong>Heterogeneity-Adjusted EWAS (haEWAS)</strong> without the need for sequencing. This framework extends EWAS from a mean-driven association to one driven by inferred heterogeneity, empowering the re-analysis of massive existing array cohorts to uncover disease-associated epigenetic variation previously obscured by conventional EWAS.
+        <strong><a href="https://www.nature.com/articles/s41467-021-25521-7" target="_blank" rel="noopener" aria-label="CAMDA paper on Nature Communications">CAMDA</a></strong>, the framework extends EWAS from average-level association to heterogeneity-aware association without requiring sequencing-based assays. This enables re-analysis of existing array cohorts to detect phenotype-associated epigenetic variation that may be missed by conventional EWAS.
       </p>
       <p class="justify">
-        This website hosts curated haEWAS meta-analysis summaries across diverse phenotypes, tissues, and analytical models, providing harmonized effect estimates under Beta, CHALM, and CAMDA metrics. Use the <strong>Explore</strong> tab for rich interactive filtering and sorting, or head to <strong>Download</strong> for reproducible CSV exports matching your selections.
+        This resource provides curated haEWAS meta-analysis results across phenotypes, tissues, and analytical settings, with harmonized statistics for Beta, CHALM, and CAMDA metrics. Use <strong>Explore</strong> for interactive filtering and locus-level inspection, and <strong>Download</strong> for reproducible CSV exports.
       </p>
     </section>
 
@@ -85,18 +85,18 @@
         <!-- 2) two half-width images -->
         <figure class="concept float">
           <img src="assets/img/CHALM.jpg" alt="CHALM concept figure" loading="lazy">
-          <figcaption><strong>CHALM</strong> — Xu et al., <em>Nat Commun</em> (2021)</figcaption>
+          <figcaption><strong>CHALM</strong> 鈥?Xu et al., <em>Nat Commun</em> (2021)</figcaption>
         </figure>
 
         <figure class="concept float">
           <img src="assets/img/CAMDA.jpg" alt="CAMDA concept figure" loading="lazy">
-          <figcaption><strong>CAMDA</strong> — Shi et al., <em>Nat Commun</em> (2021)</figcaption>
+          <figcaption><strong>CAMDA</strong> 鈥?Shi et al., <em>Nat Commun</em> (2021)</figcaption>
         </figure>
       </div>
 
       <!-- Note under CHALM & CAMDA (justified) -->
       <p class="justify" style="margin-top:10px;">
-        <strong>Note:</strong> <strong>CHALM</strong> quantifies the promoter methylation as the ratio of methylated reads (with ≥1 mCpG) to total reads mapped to a given promoter region. <strong>CAMDA</strong> quantifies the concurrence of active DNA methylation and demethylation within the same cell by dissecting reads from bisulfite sequencing.
+        <strong>Note:</strong> <strong>CHALM</strong> quantifies promoter methylation as the proportion of reads containing at least one methylated CpG within a promoter region. <strong>CAMDA</strong> quantifies the co-occurrence of active methylation and demethylation signals within individual bisulfite sequencing reads.
       </p>
     </section>
 
@@ -138,8 +138,10 @@
 
   <footer class="site-footer">
     <div class="container">
-      <p>© <span id="year"></span> Heterogeneity-Adjusted EWAS Explorer. All rights reserved.</p>
+      <p>漏 <span id="year"></span> Heterogeneity-Adjusted EWAS Explorer. All rights reserved.</p>
     </div>
   </footer>
 </body>
 </html>
+
+
