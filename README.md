@@ -15,5 +15,5 @@ If you use this explorer or the haEWAS framework in your research, please cite:
 > A. et al. (2026). Correcting methylation heterogeneity improves epigenome-wide discovery of phenotype-associated loci.*
 
 ---
-漏 2026 **Heterogeneity-Adjusted EWAS Explorer Team**. All rights reserved.*
+© 2026 **Heterogeneity-Adjusted EWAS Explorer Team**. All rights reserved.*
 
