@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <title>Download • Heterogeneity-Adjusted EWAS Explorer</title>
+  <title>Download - Heterogeneity-Adjusted EWAS Explorer</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="Download haEWAS meta-analysis result files (CSV)." />
   <link rel="icon" href="assets/img/logo.jpg" type="image/jpeg">
@@ -10,7 +10,7 @@
   <script src="assets/site-config.js?v=20260527a"></script>
   <script defer src="assets/download.js?v=20260527a"></script>
 </head>
-<body>
+<body class="portal-page">
   <header class="site-header">
     <div class="nav-wrap container">
       <a class="brand" href="index.html#home">
@@ -28,18 +28,18 @@
     </div>
   </header>
 
-  <main class="container section">
+  <main class="container section portal-main">
 
-    <form id="dlFilters" class="filters">
+    <form id="dlFilters" class="filters portal-filters">
       <div class="field grow">
         <label for="fQuery">Search Datasets</label>
-        <input id="fQuery" class="input" type="search" placeholder="Search by dataset or filename…" />
+        <input id="fQuery" class="input" type="search" placeholder="Search by dataset or filename..." />
       </div>
 
       <button type="button" id="dlReset" class="btn ghost">Reset</button>
     </form>
 
-    <div class="table-wrap">
+    <div class="table-wrap portal-data-card">
       <table class="table" id="dlTable">
         <thead>
           <tr>
@@ -65,3 +65,4 @@
   </footer>
 </body>
 </html>
+

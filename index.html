@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="assets/styles.css?v=20260527a" />
   <script defer src="assets/main.js?v=20260527a"></script>
 </head>
-<body>
+<body class="home-page">
   <!-- Decorative gradient background -->
   <div class="bg-orb orb-1" aria-hidden="true"></div>
   <div class="bg-orb orb-2" aria-hidden="true"></div>
@@ -36,9 +36,9 @@
     </div>
   </header>
 
-  <main id="home">
+  <main id="home" class="home-main">
     <!-- Hero (single column). Title + lede same width as figures -->
-    <section class="hero container hero-split reveal">
+    <section class="hero container hero-split reveal home-hero-panel">
       <div class="hero-copy">
         <h1 class="display gradient-text display-full">Heterogeneity-Adjusted EWAS Explorer</h1>
         <p class="lede lede-full">
@@ -58,7 +58,7 @@
     </section>
 
     <!-- Overview above figures -->
-    <section class="section container reveal">
+    <section class="section container reveal home-section home-overview">
       <h3 class="h2-tight">Why Heterogeneity-Adjusted EWAS (haEWAS)?</h3>
       <p class="justify">
         Epigenome-wide association studies (EWAS) have identified many DNA methylation changes associated with disease and complex traits. Most EWAS analyse microarray-derived beta values, which summarize average methylation (<i>m̄</i>) across bulk samples. Average methylation, however, cannot resolve differences in the distribution of methylation states across cells or DNA molecules within bulk samples. This distributional variation is referred to here as methylation heterogeneity, denoted <i>h<sub>m</sub></i>. Cell-type deconvolution addresses compositional variation, but not heterogeneity within the underlying methylation patterns. Direct measurement of <i>h<sub>m</sub></i> by whole-genome bisulfite sequencing (WGBS) remains impractical for many large cohorts.
@@ -75,7 +75,7 @@
     </section>
 
     <!-- Concept figures (hover to lift) -->
-    <section class="section container reveal">
+    <section class="section container reveal home-section home-figures">
       <div class="figure-grid">
         <!-- 1) first image full row -->
         <figure class="concept float full">
@@ -101,7 +101,7 @@
     </section>
 
     <!-- Citation (hover to lift) -->
-    <section id="citation" class="section container reveal">
+    <section id="citation" class="section container reveal home-section home-citation-section">
       <h2 class="eyebrow">Citation</h2>
       <div class="citation-card glass float-card">
         <p>
