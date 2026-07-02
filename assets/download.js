@@ -74,7 +74,7 @@ function renderTable() {
       <td>${f.name}</td>
       <td>${f.dataset}</td>
       <td>${typeof f.sizeBytes === 'number' ? humanSize(f.sizeBytes) : ''}</td>
-      <td><a class="btn ghost" href="${f.url}" download>Download</a></td>
+      <td><a class="btn ghost download-link" href="${f.url}" download>Download</a></td>
     `;
     tbody.appendChild(tr);
   }

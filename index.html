@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <title>Heterogeneity-Adjusted EWAS Explorer</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Explore heterogeneity-Adjusted EWAS meta-analyses with Beta, CHALM, and CAMDA metrics." />
+  <meta name="description" content="Explore heterogeneity-Adjusted EWAS meta-analyses with Beta, CAMDA, and CHALM metrics." />
 
   <link rel="icon" href="assets/img/logo.jpg" type="image/jpeg">
   <link rel="preload" as="image" href="assets/img/logo.jpg">
@@ -42,7 +42,7 @@
       <div class="hero-copy">
         <h1 class="display gradient-text display-full">Heterogeneity-Adjusted EWAS Explorer</h1>
         <p class="lede lede-full">
-          A web resource for heterogeneity-adjusted epigenome-wide association studies. The platform applies a CpG-specific Methylation Average-to-Heterogeneity Conversion Model Set (A2H) to derive CpG-specific estimates of methylation heterogeneity (<i>h<sub>m</sub></i>) from array-measured average methylation (<i>m̄</i>), enabling identification of phenotype-associated loci not detected by conventional EWAS.
+          A web resource for heterogeneity-adjusted epigenome-wide association studies. The platform applies a CpG-specific Methylation Average-to-Heterogeneity Conversion Model Set (<a href="https://github.com/ChaorongC/A2H" target="_blank" rel="noopener" aria-label="A2H GitHub repository">A2H</a>) to derive CpG-specific estimates of methylation heterogeneity (<i>h<sub>m</sub></i>) from array-measured average methylation (<i>m̄</i>), enabling identification of phenotype-associated loci not detected by conventional EWAS.
         </p>
         <div class="cta-row">
           <a class="btn primary btn-lg" href="explore.html">Start Exploring</a>
@@ -54,10 +54,9 @@
           <li><strong>Dynamic Data Exploration:</strong> Provides interactive Manhattan plots and linked result tables for locus-level inspection, filtering and download.</li>
         </ul>
       </div>
-      <!-- right visual intentionally removed -->
     </section>
 
-    <!-- Overview above figures -->
+    <!-- 文字介绍层与图片合并在同一个 section 中，消除分界 -->
     <section class="section container reveal home-section home-overview">
       <h3 class="h2-tight">Why Heterogeneity-Adjusted EWAS (haEWAS)?</h3>
       <p class="justify">
@@ -65,44 +64,25 @@
       </p>
       <p class="justify">
         haEWAS addresses this limitation by inferring <i>h<sub>m</sub></i> from standard methylation array signals. Using a CpG-specific Methylation Average-to-Heterogeneity Conversion Model Set, hereafter referred to as A2H, the framework links <i>m̄</i> to measures such as
-        <strong><a href="https://www.nature.com/articles/s41467-020-20492-7" target="_blank" rel="noopener" aria-label="CHALM paper on Nature Communications">CHALM</a></strong>
+        <strong><a href="https://www.nature.com/articles/s41467-021-25521-7" target="_blank" rel="noopener" aria-label="CAMDA paper on Nature Communications">CAMDA</a></strong>
         and
-        <strong><a href="https://www.nature.com/articles/s41467-021-25521-7" target="_blank" rel="noopener" aria-label="CAMDA paper on Nature Communications">CAMDA</a></strong>, the framework extends EWAS from <i>m̄</i>-based association to <i>h<sub>m</sub></i>-aware association without requiring sequencing-based assays. This enables re-analysis of existing array cohorts to detect phenotype-associated epigenetic variation that may be missed by conventional EWAS.
+        <strong><a href="https://www.nature.com/articles/s41467-020-20492-7" target="_blank" rel="noopener" aria-label="CHALM paper on Nature Communications">CHALM</a></strong>, the framework extends EWAS from <i>m̄</i>-based association to <i>h<sub>m</sub></i>-aware association without requiring sequencing-based assays. This enables re-analysis of existing array cohorts to detect phenotype-associated epigenetic variation that may be missed by conventional EWAS.
       </p>
       <p class="justify">
-        This resource provides curated haEWAS meta-analysis results across phenotypes, tissues, and analytical settings, with harmonized statistics for Beta, CHALM, and CAMDA metrics. It also supports application of A2H to user-provided array methylation data. Use <strong>Explore</strong> for interactive filtering and locus-level inspection, and <strong>Download</strong> for reproducible CSV exports.
+        This resource provides curated haEWAS meta-analysis results across phenotypes, tissues, and analytical settings, with harmonized statistics for Beta, CAMDA, and CHALM metrics. It also supports application of A2H to user-provided array methylation data. Use <strong>Explore</strong> for interactive filtering and locus-level inspection, and <strong>Download</strong> for reproducible CSV exports.
       </p>
-    </section>
 
-    <!-- Concept figures (hover to lift) -->
-    <section class="section container reveal home-section home-figures">
-      <div class="figure-grid">
-        <!-- 1) first image full row -->
+      <!-- 图片紧跟在文字下方，保留独立悬浮动效，没有区隔 -->
+      <div class="figure-grid single-figure" style="margin-top: 2rem;">
         <figure class="concept float full">
           <img src="assets/img/Project.jpg" alt="Project overview concept figure" loading="lazy">
         </figure>
-
-        <!-- 2) two half-width images -->
-        <figure class="concept float">
-          <img src="assets/img/CHALM.jpg" alt="CHALM concept figure" loading="lazy">
-          <figcaption><strong>CHALM</strong> Xu et al., <em>Nat Commun</em> (2021)</figcaption>
-        </figure>
-
-        <figure class="concept float">
-          <img src="assets/img/CAMDA.jpg" alt="CAMDA concept figure" loading="lazy">
-          <figcaption><strong>CAMDA</strong> Shi et al., <em>Nat Commun</em> (2021)</figcaption>
-        </figure>
       </div>
-
-      <!-- Note under CHALM & CAMDA (justified) -->
-      <p class="justify" style="margin-top:10px;">
-        <strong>Note:</strong> <strong>CHALM</strong> quantifies promoter methylation as the proportion of reads containing at least one methylated CpG within a promoter region. <strong>CAMDA</strong> quantifies the co-occurrence of active methylation and demethylation signals within individual bisulfite sequencing reads.
-      </p>
     </section>
 
     <!-- Citation (hover to lift) -->
     <section id="citation" class="section container reveal home-section home-citation-section">
-      <h2 class="eyebrow">Citation</h2>
+      <h2 style="text-transform: none; font-size: 2rem; margin-bottom: 1rem;">Citation</h2>
       <div class="citation-card glass float-card">
         <p>
           Shengwei Li#, Chaorong Chen#, Shuting Zhou, Shengying Wang, Ya Allen Cui, Wei Li*, Jiejun Shi*. Incorporating methylation heterogeneity expands epigenome-wide association studies of human phenotypes.
@@ -112,6 +92,12 @@
         <div id="toast" class="toast" role="status" aria-live="polite" aria-atomic="true"></div>
       </div>
     </section>
+
+    <!-- 访客统计：无卡片，原色彩，尺寸放大 -->
+    <div style="text-align: center; margin: 3rem auto 1rem; max-width: 600px;">
+      <script type="text/javascript" id="mapmyvisitors" src="//mapmyvisitors.com/map.js?d=dO8FqO0wkgZn4knfUEPgLu-SlcP5Q9MNIGn4N_yD57w&cl=ffffff&w=a"></script>
+    </div>
+
   </main>
 
   <footer class="site-footer">
@@ -121,5 +107,3 @@
   </footer>
 </body>
 </html>
-
-

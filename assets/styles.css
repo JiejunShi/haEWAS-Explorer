@@ -1,4 +1,4 @@
-:root{
+﻿:root{
   --bg: #f4f2ee;
   --panel: #ffffff;
   --text: #18212c;
@@ -49,6 +49,7 @@ p{margin:0 0 16px;color:var(--text)}
   background:rgba(255,255,255,.96);
   backdrop-filter: blur(10px);
   border-bottom:1px solid rgba(24, 33, 44, .08);
+
 }
 html.light .site-header{background:rgba(255,255,255,.7)}
 
@@ -477,6 +478,12 @@ figure.concept.float:hover {
   gap: 18px;
 }
 
+.home-figures .single-figure{
+  max-width: 1040px;
+  margin: 0 auto;
+  grid-template-columns: 1fr;
+}
+
 .home-page figure.concept{
   background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
   border-radius: 10px;
@@ -492,6 +499,66 @@ figure.concept.float:hover {
 .home-page .home-citation-section{
   background: linear-gradient(180deg, #ffffff 0%, #fbfcfd 100%);
 }
+
+.home-usage-section{
+  background: linear-gradient(180deg, #ffffff 0%, #fbfcfd 100%);
+}
+
+.usage-head{
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 14px;
+}
+
+.usage-head p{
+  margin: 0;
+}
+
+.usage-grid{
+  display: grid;
+  grid-template-columns: minmax(240px, 360px);
+  gap: 16px;
+  align-items: stretch;
+}
+
+.usage-card{
+  padding: 18px 20px;
+  background: linear-gradient(180deg, #ffffff 0%, #f7fafc 100%);
+  border: 1px solid rgba(35, 66, 95, .10);
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(21, 31, 43, .04);
+}
+
+.usage-value{
+  font-size: clamp(26px, 3.5vw, 34px);
+  font-weight: 700;
+  line-height: 1;
+  color: var(--brand);
+  margin-bottom: 8px;
+}
+
+.usage-label{
+  font-size: .92rem;
+  color: var(--muted);
+}
+
+.usage-meta{
+  margin-top: 10px;
+  font-size: .82rem;
+  line-height: 1.55;
+  color: #6f7d8b;
+}
+
+.usage-card-primary{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 210px;
+}
+
+
 
 .home-page .citation-card{
   margin-top: 0;
@@ -516,6 +583,15 @@ figure.concept.float:hover {
 
   .home-page .hero-copy .display{
     font-size: clamp(29px, 7vw, 40px);
+  }
+
+  .usage-head{
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .usage-grid{
+    grid-template-columns: 1fr;
   }
 }
 
@@ -631,6 +707,9 @@ figure.concept.float:hover {
   font-size: 15px;
   font-weight: 700;
   color: var(--text);
+  overflow-wrap: anywhere;
+  word-break: break-all;
+  line-height: 1.4;
 }
 
 .portal-detail-label{
@@ -779,3 +858,4 @@ figure.concept.float:hover {
     height: auto;
   }
 }
+

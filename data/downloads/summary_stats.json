@@ -598,6 +598,24 @@
       "Both": 2969
     }
   },
+  "driver_overlap": {
+    "CHALM": {
+      "haEWAS-specific": 13338,
+      "Common": 13731,
+      "EWAS-specific": 36578
+    },
+    "CAMDA": {
+      "haEWAS-specific": 41379,
+      "Common": 9169,
+      "EWAS-specific": 41140
+    },
+    "_definition": "Both loci are counted in both CHALM and CAMDA panels.",
+    "_totals": {
+      "haEWAS-specific": 51748,
+      "Common": 17645,
+      "EWAS-specific": 32664
+    }
+  },
   "regions": {
     "Common": {
       "Body": 13326,
