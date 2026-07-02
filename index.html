@@ -42,16 +42,16 @@
       <div class="hero-copy">
         <h1 class="display gradient-text display-full">Heterogeneity-Adjusted EWAS Explorer</h1>
         <p class="lede lede-full">
-          A web resource for analysing, visualizing, and <strong>converting</strong> DNA methylation array data with heterogeneity-adjusted metrics. The platform supports identification of phenotype-associated CpG sites that may not be resolved by conventional EWAS based solely on mean methylation levels.
+          A web resource for heterogeneity-adjusted epigenome-wide association studies. The platform applies a CpG-specific Methylation Average-to-Heterogeneity Conversion Model Set (A2H) to derive CpG-specific estimates of methylation heterogeneity (<i>h<sub>m</sub></i>) from array-measured average methylation (<i>m̄</i>), enabling identification of phenotype-associated loci not detected by conventional EWAS.
         </p>
         <div class="cta-row">
           <a class="btn primary btn-lg" href="explore.html">Start Exploring</a>
           <a class="btn outline btn-lg" href="download.html">Get Data</a>
         </div>
         <ul class="hero-highlights">
-          <li><strong>Online Matrix Converter:</strong> Convert EPIC/450k beta-value matrices to CHALM and CAMDA representations for downstream haEWAS analysis.</li>
-          <li><strong>Global Statistics Dashboard:</strong> Compare haEWAS-specific, conventional EWAS-specific, and shared signals across curated phenotypes.</li>
-          <li><strong>Dynamic Data Exploration:</strong> Inspect Manhattan plots and linked result tables for locus-level review and filtering.</li>
+          <li><strong>Online Matrix Converter:</strong> Applies A2H to convert EPIC/450k array-measured <i>m̄</i> into CpG-specific <i>h<sub>m</sub></i> estimates for downstream haEWAS analysis.</li>
+          <li><strong>Global Statistics Dashboard:</strong> Summarises haEWAS, conventional EWAS and common loci across curated phenotypes, with emphasis on haEWAS-specific discoveries.</li>
+          <li><strong>Dynamic Data Exploration:</strong> Provides interactive Manhattan plots and linked result tables for locus-level inspection, filtering and download.</li>
         </ul>
       </div>
       <!-- right visual intentionally removed -->
@@ -61,16 +61,16 @@
     <section class="section container reveal">
       <h3 class="h2-tight">Why Heterogeneity-Adjusted EWAS (haEWAS)?</h3>
       <p class="justify">
-        Epigenome-wide association studies (EWAS) have identified many DNA methylation changes associated with disease and complex traits. Most EWAS analyse microarray-derived beta values, which summarize mean methylation across bulk samples. This summary can obscure differences in <strong>single-molecule methylation heterogeneity</strong> between loci with similar mean levels. Cell-type deconvolution addresses compositional variation, but not heterogeneity within the underlying methylation patterns. Direct measurement of such heterogeneity by whole-genome bisulfite sequencing (WGBS) remains impractical for many large cohorts.
+        Epigenome-wide association studies (EWAS) have identified many DNA methylation changes associated with disease and complex traits. Most EWAS analyse microarray-derived beta values, which summarize average methylation (<i>m̄</i>) across bulk samples. Average methylation, however, cannot resolve differences in the distribution of methylation states across cells or DNA molecules within bulk samples. This distributional variation is referred to here as methylation heterogeneity, denoted <i>h<sub>m</sub></i>. Cell-type deconvolution addresses compositional variation, but not heterogeneity within the underlying methylation patterns. Direct measurement of <i>h<sub>m</sub></i> by whole-genome bisulfite sequencing (WGBS) remains impractical for many large cohorts.
       </p>
       <p class="justify">
-        haEWAS addresses this limitation by inferring heterogeneity-related metrics from standard methylation array signals. By linking mean methylation levels to measures such as
+        haEWAS addresses this limitation by inferring <i>h<sub>m</sub></i> from standard methylation array signals. Using a CpG-specific Methylation Average-to-Heterogeneity Conversion Model Set, hereafter referred to as A2H, the framework links <i>m̄</i> to measures such as
         <strong><a href="https://www.nature.com/articles/s41467-020-20492-7" target="_blank" rel="noopener" aria-label="CHALM paper on Nature Communications">CHALM</a></strong>
         and
-        <strong><a href="https://www.nature.com/articles/s41467-021-25521-7" target="_blank" rel="noopener" aria-label="CAMDA paper on Nature Communications">CAMDA</a></strong>, the framework extends EWAS from average-level association to heterogeneity-aware association without requiring sequencing-based assays. This enables re-analysis of existing array cohorts to detect phenotype-associated epigenetic variation that may be missed by conventional EWAS.
+        <strong><a href="https://www.nature.com/articles/s41467-021-25521-7" target="_blank" rel="noopener" aria-label="CAMDA paper on Nature Communications">CAMDA</a></strong>, the framework extends EWAS from <i>m̄</i>-based association to <i>h<sub>m</sub></i>-aware association without requiring sequencing-based assays. This enables re-analysis of existing array cohorts to detect phenotype-associated epigenetic variation that may be missed by conventional EWAS.
       </p>
       <p class="justify">
-        This resource provides curated haEWAS meta-analysis results across phenotypes, tissues, and analytical settings, with harmonized statistics for Beta, CHALM, and CAMDA metrics. Use <strong>Explore</strong> for interactive filtering and locus-level inspection, and <strong>Download</strong> for reproducible CSV exports.
+        This resource provides curated haEWAS meta-analysis results across phenotypes, tissues, and analytical settings, with harmonized statistics for Beta, CHALM, and CAMDA metrics. It also supports application of A2H to user-provided array methylation data. Use <strong>Explore</strong> for interactive filtering and locus-level inspection, and <strong>Download</strong> for reproducible CSV exports.
       </p>
     </section>
 
@@ -100,34 +100,12 @@
       </p>
     </section>
 
-    <section class="container" style="margin-top: 4rem; margin-bottom: 4rem; text-align: center;">
-      
-      <div style="
-        display: flex; 
-        justify-content: center; 
-        align-items: center; 
-        background: #f7f8fb; 
-        border-radius: 16px; 
-        padding: 16px; 
-        max-width: 620px;
-        width: 90%;
-        margin: 0 auto; 
-        box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-        border: 1px solid #e6e9f2;
-        overflow: hidden; 
-      ">
-    
-      <script type='text/javascript' id='clustrmaps' src='https://cdn.clustrmaps.com/map_v2.js?cl=ffffff&w=560&t=tt&d=QPnFJKyKGOmVxB-OaBwcZiFkfsT17oWWzldOo5U8VV8&co=97c6e8&cmo=44dbd9&cmn=db4444&ct=000000'></script>
-    
-      </div>
-    </section>
-
     <!-- Citation (hover to lift) -->
     <section id="citation" class="section container reveal">
       <h2 class="eyebrow">Citation</h2>
       <div class="citation-card glass float-card">
         <p>
-          <strong>Name</strong>, et&nbsp;al. Correcting methylation heterogeneity improves epigenome-wide discovery of phenotype-associated loci.
+          <strong>Name</strong>, et&nbsp;al. Incorporating methylation heterogeneity expands epigenome-wide association studies of human phenotypes.
           <em>Preprint/Journal</em>, 2026. DOI: <span class="doi">TBD</span>.
         </p>
         <button class="btn ghost" id="copyCitationBtn" aria-label="Copy citation">Copy citation</button>

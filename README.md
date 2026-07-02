@@ -1,19 +1,19 @@
 ﻿# Heterogeneity-Adjusted EWAS Explorer (v1.0)
 
-**Heterogeneity-Adjusted EWAS Explorer** is a web resource for analysing, visualizing, and **converting** DNA methylation array data with heterogeneity-adjusted metrics. By implementing the **Heterogeneity-Adjusted (haEWAS)** framework, the platform supports identification of phenotype-associated CpG sites driven by methylation heterogeneity (**CHALM** and **CAMDA**) that may not be resolved by conventional beta-value-based Epigenome-Wide Association Studies (EWAS).
+**Heterogeneity-Adjusted EWAS Explorer** is a web resource for heterogeneity-adjusted epigenome-wide association studies. The platform applies a CpG-specific Methylation Average-to-Heterogeneity Conversion Model Set (A2H) to derive CpG-specific estimates of methylation heterogeneity (<i>h<sub>m</sub></i>) from array-measured average methylation (<i>m̄</i>), enabling identification of phenotype-associated loci not detected by conventional EWAS.
 
 ## Key Features
 
-* **Online Matrix Converter:** Convert standard methylation beta-value arrays (EPIC/850k or HM450k) to heterogeneity-adjusted matrices (CHALM and CAMDA) for downstream analysis.
-* **Global Statistics Dashboard:** Summarizes haEWAS-specific, conventional EWAS-specific, and shared signals across curated phenotypes.
-* **Interactive Manhattan Plots:** Provides genome-wide association views linked to result tables for locus-level inspection and filtering.
+* **Online Matrix Converter:** Applies A2H to convert EPIC/450k array-measured <i>m̄</i> into CpG-specific <i>h<sub>m</sub></i> estimates for downstream haEWAS analysis.
+* **Global Statistics Dashboard:** Summarises haEWAS, conventional EWAS and common loci across curated phenotypes, with emphasis on haEWAS-specific discoveries.
+* **Interactive Manhattan Plots:** Provides interactive Manhattan plots and linked result tables for locus-level inspection, filtering and download.
 
 ## Citation
 
-If you use this explorer or the haEWAS framework in your research, please cite:
+If you use this resource or the haEWAS framework in your research, please cite:
 
-> A. et al. (2026). Correcting methylation heterogeneity improves epigenome-wide discovery of phenotype-associated loci.*
+> A. et al. (2026). Incorporating methylation heterogeneity expands epigenome-wide association studies of human phenotypes.*
 
 ---
-© 2026 **Heterogeneity-Adjusted EWAS Explorer Team**. All rights reserved.*
+© 2026 **Heterogeneity-Adjusted EWAS Explorer Team**. All rights reserved.
 
