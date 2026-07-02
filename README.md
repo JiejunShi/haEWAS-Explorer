@@ -12,7 +12,7 @@
 
 If you use this resource or the haEWAS framework in your research, please cite:
 
-> A. et al. (2026). Incorporating methylation heterogeneity expands epigenome-wide association studies of human phenotypes.*
+> Shengwei Li#, Chaorong Chen#, Shuting Zhou, Shengying Wang, Ya Allen Cui, Wei Li*, Jiejun Shi*. Incorporating methylation heterogeneity expands epigenome-wide association studies of human phenotypes.
 
 ---
 © 2026 **Heterogeneity-Adjusted EWAS Explorer Team**. All rights reserved.

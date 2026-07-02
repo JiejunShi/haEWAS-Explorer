@@ -23,7 +23,7 @@ document.addEventListener('click', (e) => {
 document.addEventListener('click', async (e) => {
   const btn = e.target.closest('#copyCitationBtn');
   if (!btn) return;
-  const citation = 'Name et al. Correcting methylation heterogeneity improves epigenome-wide discovery of phenotype-associated CpGs. Preprint/Journal, 2026. DOI: TBD.';
+  const citation = 'Shengwei Li#, Chaorong Chen#, Shuting Zhou, Shengying Wang, Ya Allen Cui, Wei Li*, Jiejun Shi*. Incorporating methylation heterogeneity expands epigenome-wide association studies of human phenotypes. Preprint/Journal, 2026. DOI: TBD.';
   try {
     await navigator.clipboard.writeText(citation);
     showToast('Copied!');
