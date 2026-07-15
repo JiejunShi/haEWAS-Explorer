@@ -116,19 +116,6 @@
         "CHALM": 9
       }
     },
-    "Systemic_Lupus_Erythematosus_Blood": {
-      "total": 3506,
-      "groups": {
-        "EWAS-specific": 100,
-        "Common": 68,
-        "haEWAS-specific": 3338
-      },
-      "drivers": {
-        "CHALM": 58,
-        "Both": 33,
-        "CAMDA": 3315
-      }
-    },
     "Postmenstrual_Age(Weeks)_solid_generic": {
       "total": 2816,
       "groups": {
@@ -244,6 +231,19 @@
         "CHALM": 379,
         "Both": 174,
         "CAMDA": 297
+      }
+    },
+    "Systemic_Lupus_Erythematosus_Blood": {
+      "total": 845,
+      "groups": {
+        "EWAS-specific": 110,
+        "Common": 58,
+        "haEWAS-specific": 677
+      },
+      "drivers": {
+        "CHALM": 66,
+        "Both": 25,
+        "CAMDA": 644
       }
     },
     "Viral_Load(log10)_Blood": {
@@ -582,20 +582,20 @@
     }
   },
   "groups": {
-    "haEWAS-specific": 51748,
-    "EWAS-specific": 32664,
-    "Common": 17645
+    "haEWAS-specific": 49087,
+    "EWAS-specific": 32674,
+    "Common": 17635
   },
   "drivers": {
     "Common": {
-      "CHALM": 8476,
-      "Both": 5255,
-      "CAMDA": 3914
+      "CHALM": 8480,
+      "Both": 5251,
+      "CAMDA": 3904
     },
     "haEWAS-specific": {
-      "CAMDA": 38410,
-      "CHALM": 10369,
-      "Both": 2969
+      "CAMDA": 35749,
+      "CHALM": 10373,
+      "Both": 2965
     }
   },
   "driver_overlap": {
@@ -605,43 +605,43 @@
       "EWAS-specific": 36578
     },
     "CAMDA": {
-      "haEWAS-specific": 41379,
-      "Common": 9169,
-      "EWAS-specific": 41140
+      "haEWAS-specific": 38714,
+      "Common": 9155,
+      "EWAS-specific": 41154
     },
     "_definition": "Both loci are counted in both CHALM and CAMDA panels.",
     "_totals": {
-      "haEWAS-specific": 51748,
-      "Common": 17645,
-      "EWAS-specific": 32664
+      "haEWAS-specific": 49087,
+      "Common": 17635,
+      "EWAS-specific": 32674
     }
   },
   "regions": {
     "Common": {
-      "Body": 13326,
-      "TSS1500": 3563,
-      "5'UTR": 3474,
-      "TSS200": 1438,
+      "Body": 13319,
+      "TSS1500": 3559,
+      "5'UTR": 3472,
+      "TSS200": 1437,
       "1stExon": 1133,
       "3'UTR": 1106,
       "ExonBnd": 59
     },
     "EWAS-specific": {
-      "Body": 24078,
-      "TSS1500": 6476,
-      "5'UTR": 6169,
-      "TSS200": 3449,
+      "Body": 24085,
+      "TSS1500": 6480,
+      "5'UTR": 6171,
+      "TSS200": 3450,
       "3'UTR": 2284,
       "1stExon": 2262,
       "ExonBnd": 63
     },
     "haEWAS-specific": {
-      "Body": 40191,
-      "5'UTR": 11343,
-      "TSS1500": 11082,
-      "TSS200": 5622,
-      "1stExon": 3550,
-      "3'UTR": 2820,
+      "Body": 38361,
+      "5'UTR": 10832,
+      "TSS1500": 10466,
+      "TSS200": 5376,
+      "1stExon": 3366,
+      "3'UTR": 2568,
       "ExonBnd": 430
     }
   }
