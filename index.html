@@ -51,8 +51,8 @@
         </div>
 
         <ul class="hero-highlights">
-          <li><strong>Association Summary:</strong> Provides an overview of significant loci identified by conventional EWAS, haEWAS and their overlap across curated phenotypes and methylation metrics.</li>
-          <li><strong>Associated Loci Browser:</strong> Supports phenotype-specific exploration of associated loci through Manhattan plots, searchable result tables, metric-based filtering and CSV download.</li>
+          <li><strong>Association Summary:</strong> Provides an overview of significant loci identified by conventional EWAS, haEWAS, or both across curated phenotypes and methylation metrics.</li>
+          <li><strong>Associated Loci Browser:</strong> Enables phenotype-specific exploration of associated loci using Manhattan plots and searchable results tables.</li>
           <li><strong>A2H Matrix Conversion:</strong> Converts EPIC/450K array-based average methylation matrices into CpG-level CAMDA and CHALM values using <a href="https://github.com/ChaorongC/A2H" target="_blank" rel="noopener" aria-label="A2H GitHub repository">A2H</a> models, enabling users to perform heterogeneity-adjusted EWAS on their own datasets.</li>
         </ul>
       </div>
@@ -62,18 +62,18 @@
       <h3 class="h2-tight">Why Heterogeneity-Adjusted EWAS (haEWAS)?</h3>
 
       <p class="justify">
-        DNA methylation is commonly summarized as average methylation, defined as the fraction of DNA molecules methylated at a CpG in a bulk sample. Although useful, average methylation is incomplete. The same average methylation level can arise from distinct underlying methylation architectures: methylation may be concentrated in a subset of DNA molecules, alleles or cellular subpopulations, or distributed broadly across the sample. Methylation heterogeneity captures this distributional information, which conventional array-based EWAS based on β-values cannot directly resolve.
+        DNA methylation is commonly summarized as average methylation, defined as the fraction of DNA molecules methylated at a CpG in a bulk sample. Although useful, average methylation is incomplete. The same average methylation level can arise from distinct underlying methylation architectures: methylation may be concentrated in a subset of DNA molecules, alleles or cellular subpopulations, or distributed broadly across the sample. Methylation heterogeneity captures this distributional information, which conventional array-based EWAS relying on β-values cannot directly distinguish.
       </p>
 
       <p class="justify">
-        Sequencing-based approaches can quantify methylation heterogeneity from read-level methylation patterns, but such data are unavailable for most large human cohorts. haEWAS addresses this barrier by learning the relationship between average methylation and heterogeneity-aware methylation measures from deep reference methylomes and transferring this information to standard EPIC/450K methylation array datasets using CpG-specific average-to-heterogeneity conversion models, referred to as <a href="https://github.com/ChaorongC/A2H" target="_blank" rel="noopener" aria-label="A2H GitHub repository">A2H</a>. This enables re-analysis of existing array cohorts without requiring new sequencing experiments. In this resource, heterogeneity-aware measures include
+        Sequencing-based approaches can quantify methylation heterogeneity from read-level methylation patterns, but such data are unavailable for most large human cohorts. haEWAS overcomes this limitation by learning CpG-specific relationships between average methylation and heterogeneity-aware measures from deeply sequenced reference methylomes, and transferring these relationships to standard EPIC and 450K array datasets through CpG-specific average-to-heterogeneity conversion models, referred to as <a href="https://github.com/ChaorongC/A2H" target="_blank" rel="noopener" aria-label="A2H GitHub repository">A2H</a>. This framework enables existing array-based cohorts to be re-analysed without additional sequencing. In this resource, heterogeneity-aware measures include
         <strong><a href="https://www.nature.com/articles/s41467-021-25521-7" target="_blank" rel="noopener" aria-label="CAMDA paper on Nature Communications">CAMDA</a></strong>
         and
         <strong><a href="https://www.nature.com/articles/s41467-020-20492-7" target="_blank" rel="noopener" aria-label="CHALM paper on Nature Communications">CHALM</a></strong>.
       </p>
 
       <p class="justify">
-        The haEWAS-Explorer provides access to curated population-scale haEWAS results across human phenotypes. Across these analyses, haEWAS identifies phenotype-associated loci missed by conventional EWAS and supports interactive visualization, filtering, associated-loci inspection and CSV download of harmonized statistics for β-value, CAMDA and CHALM analyses. The resource also includes an online matrix converter for applying A2H models to user-provided EPIC/450K methylation array data.
+        The haEWAS-Explorer provides access to curated, population-scale haEWAS results across a broad range of human phenotypes. These analyses reveal phenotype-associated loci that are not detected by conventional EWAS. The platform enables interactive visualization, filtering, locus-level exploration, and downloading of harmonized summary statistics. It also includes an online matrix converter that applies A2H models to user-provided EPIC and 450K DNA methylation array data.
       </p>
 
       <div class="figure-grid single-figure" style="margin-top: 2rem;">
