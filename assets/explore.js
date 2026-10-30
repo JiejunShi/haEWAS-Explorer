@@ -5,7 +5,7 @@ const UPDATE_INTERVAL_MS = 300;
 const DATA_VERSION = window.HAEWAS_CONFIG?.DATA_VERSION || 'dev';
 const MANIFEST_REL = 'data/downloads/index.json';
 const CSV_DIR_REL  = 'data/downloads';
-const CACHE_VERSION = "v3.0";
+const CACHE_VERSION = "v4.0-ewas-raw-effects";
 
 function detectBasePrefix() {
   const p = location.pathname;
@@ -25,7 +25,7 @@ function versionedUrl(urlLike) {
 }
 const MANIFEST_URL = versionedUrl(MANIFEST_REL);
 function csvAbsUrl(name) { return versionedUrl(`${CSV_DIR_REL}/${name}`); }
-const WORKER_URL = new URL('assets/csvWorker.js', BASE_URL); 
+const WORKER_URL = versionedUrl('assets/csvWorker.js');
 
 let rawData = [];
 let filtered = [];
@@ -106,7 +106,7 @@ function sortData() {
   const key = sortKey;
   const numericKeys = [
     'Start', 'End', 
-    'P_Beta', 'Effect_Beta', 'FDR_Beta',
+    'P_EWAS', 'Effect_EWAS', 'FDR_EWAS',
     'P_haEWAS', 'Effect_haEWAS', 'FDR_haEWAS'
   ];
 
@@ -177,9 +177,9 @@ function renderTable(force = false) {
       <td>${formatNumber(d.P_haEWAS)}</td>
       <td>${formatNumber(d.Effect_haEWAS)}</td>
       <td>${formatNumber(d.FDR_haEWAS)}</td>
-      <td>${formatNumber(d.P_Beta)}</td>
-      <td>${formatNumber(d.Effect_Beta)}</td>
-      <td>${formatNumber(d.FDR_Beta)}</td>
+      <td>${formatNumber(d.P_EWAS)}</td>
+      <td>${formatNumber(d.Effect_EWAS)}</td>
+      <td>${formatNumber(d.FDR_EWAS)}</td>
       <td>${d.Group ?? ''}</td>
     `;
     tbody.appendChild(tr);
@@ -267,7 +267,7 @@ function renderManhattanPlot() {
 
       let rawP = d.P_haEWAS; 
       if (d.Group === 'EWAS-specific' || d.Group === 'Beta-specific' || d.Group === 'Common' || d.Group === 'common') {
-        rawP = d.P_Beta;
+        rawP = d.P_EWAS;
       }
 
       if (rawP === null || rawP === undefined || String(rawP).trim() === '' || String(rawP).toUpperCase() === 'NA') {
@@ -282,7 +282,7 @@ function renderManhattanPlot() {
       xVals.push(offset + Number(d.Start));
       yVals.push(-Math.log10(plotP));
 
-      let plottedPName = (d.Group === 'haEWAS-specific') ? 'P_haEWAS' : 'P_Beta';
+      let plottedPName = (d.Group === 'haEWAS-specific') ? 'P_haEWAS' : 'P_EWAS';
 
       textVals.push(
         `<b>CpG:</b> ${d.CpG_ID}<br>` +
@@ -292,7 +292,7 @@ function renderManhattanPlot() {
         `----------------------<br>` +
         `<b>Plotting Y:</b> -log10(${plottedPName})<br>` +
         `<b>P_haEWAS:</b> ${formatNumber(d.P_haEWAS)} (FDR: ${formatNumber(d.FDR_haEWAS)})<br>` +
-        `<b>P_Beta:</b> ${formatNumber(d.P_Beta)} (FDR: ${formatNumber(d.FDR_Beta)})`
+        `<b>P_EWAS:</b> ${formatNumber(d.P_EWAS)} (FDR: ${formatNumber(d.FDR_EWAS)})`
       );
     });
 
@@ -503,7 +503,7 @@ function applyFilters() {
     if (maxP !== null) {
       let rawP = d.P_haEWAS; 
       if (d.Group === 'EWAS-specific' || d.Group === 'Beta-specific' || d.Group === 'Common' || d.Group === 'common') {
-        rawP = d.P_Beta;
+        rawP = d.P_EWAS;
       }
       let plotP = Number(rawP);
       if (isNaN(plotP) || plotP > maxP) return false;

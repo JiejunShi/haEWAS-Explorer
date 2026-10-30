@@ -46,9 +46,9 @@ self.onmessage = (e) => {
           P_haEWAS: +d.P_haEWAS,
           Effect_haEWAS: +d.Effect_haEWAS,
           FDR_haEWAS: +d.FDR_haEWAS,
-          P_Beta: +d.P_Beta,
-          Effect_Beta: +d.Effect_Beta,
-          FDR_Beta: +d.FDR_Beta,
+          P_EWAS: +d.P_EWAS,
+          Effect_EWAS: +d.Effect_EWAS,
+          FDR_EWAS: +d.FDR_EWAS,
           Group: cleanGroup,
           Source: fileLabel
         };
